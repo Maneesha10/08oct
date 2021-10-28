@@ -1,0 +1,33 @@
+                                  TRY SLIDE-41
+
+1.mkdir test
+2.cat >employeelist,cat >skillset
+3.mkdir test2
+  --i. ln -s skillset sskillset, ln skillset nskillset 
+  --ii. hardlimk file exists
+4.chmode 764 file
+5.chmode 744 file
+6.chmode 746 file
+7.chmode 744 file
+8.chgrp user3 employeelist
+9.chown user5 file
+10. wc employeelist
+
+
+                               TRY SLIDE-47
+1.cat >file1
+2.cat >>file1
+3.cat >file2
+4.cat file1 file2
+5.cat file1 file2 >file12
+6.ls >file3
+7.
+8.ls 2>errorlog
+9.cat file1 file2 file3 file4 file5 >file10 2>&1
+10.cp file1 file6 2>errorlog
+
+               
+                              TRY SLIDE 55
+1.head -25 file| tail +10
+2.head -10 file | tail +10
+7.records |wc -l                                
