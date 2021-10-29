@@ -1,0 +1,87 @@
+                                  TRY SLIDE-41
+
+1. Create folder 'Test' in your home directory
+    mkdir test
+2. Create below files
+  - employeelist
+  - skillset  --->cat >employeelist,cat >skillset
+3.Create folder Test2 in home directory -->mkdir test2
+  - create symbolink and hard link for skillset file 
+      ln -s skillset sskillset, ln skillset nskillset
+  - delete skillset file and check if hardlink and symbolic link file exists -->hardlimk file exists
+  - explain the difference b/n symbolic and hard links
+
+4. Provide read and write permission to 'user2' group test if user2 group users can access the file
+      chmode 764 file
+5. Revoke write permission from user2 group and test the access again
+      chmode 744 file
+6.Grant write permission for others and test it  
+      chmode 746 file
+7.Revoke write permission for others and test again 
+     chmode 744 file
+8.Change the group of employeelist file to 'user3'test if user3 group have access
+     chgrp user3 employeelist
+9.Change ownership of the file to user5 and test
+     chown user5 file
+10.  check how many employees are there
+      wc employeelist
+
+
+                               TRY SLIDE-47
+1.Create file “File1” -->cat >file1
+2.Append 2 more lines to the same file -->cat >>file1
+3.Append 2 more lines to the same file --->cat >file2
+4.Display the contents of both File1 and File2 -->cat file1 file2
+5.Concatenate both File1 & 2 -->cat file1 file2 >file12
+6.Send the above output to File3 -->ls >file3
+7.Read File1,File2,File3… File5 . Observe the output
+8.Redirect the errors of the above command to “errorlog” -->ls 2>errorlog
+9.Concatenate name File1 to 5 and store it in File 10. if any errors, log them in the same file -->cat file1 file2 file3 file4 file5 >file10 2>&1
+10.Copy File1 to File6. Add the errors to “errorlog”-->cp file1 file6 2>errorlog
+
+               
+                              TRY SLIDE 55
+1.The 10th to 25th  lines in a file 
+     head -25 file| tail +10
+2.List only 10th line in a file​   
+     head -10 file | tail +10
+3.List only the recently modified file in the current directory​ 
+     ls -lt | head -1
+4.List only the smallest file in the current directory​           
+    ls -lsr | sort
+
+5  A data file is updated regularly, each day with 10 new records. 
+New records are appended at the end.Write the command to print total number of records in the file.​   
+  wc_records
+6 Write the command to list only the records entered 3 days before 
+
+
+
+                              TRY SLIDE 61
+1.Lines containing A -->grep "A" file
+2.lines containing The at the beginning -->grep "^The" file
+3.lines  ending with  .  -->grep "\.$" file
+4.lines with a,b or c as the second letter -->grep "^.[a-c]" file
+5.lines which contain def , deef or deeeef -->grep "def deef deeeef" file
+6.lines not having numbers at the beginning  -->grep -v "^[0-9]" file
+7.empty lines
+8.list the password file details of user1 - user10 -->grep "[user1-user10]" password
+9.list only directories -->ls -l | grep ^d 
+10.list out the C programs in the current directory which are using math library file (hint:  math library file - math.h)
+     -->ls -l |grep math.h
+
+
+ 
+                               TRY SLIDE 92
+1.Insert an heading at the beginning of the file​ 
+    press-O
+2.Remove the second line in the file and try undo command​
+   press dd-to remove and u -undo
+3.Search for all occurrences of bc
+   :/bc
+4.Remove the word number
+    1,$s/number/ /g  
+5.Replace all occurrences of char c in line1 only with C 
+    1 s/c/C/g
+6.Replace all occurrences of space with \t
+    1,$s/ /\t/g                       
